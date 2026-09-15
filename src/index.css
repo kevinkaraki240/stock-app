@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+/* Tailwind CSS v4 theme directive. The at-rule is handled by Tailwind. */
+/* stylelint-disable-next-line at-rule-no-unknown */
+@theme {
+  /* Nền & bề mặt */
+  --color-bg: #0b0e11;
+  --color-panel: #12161b;
+  --color-panel-hover: #171c22;
+  --color-border: #1f2630;
+
+  /* Chữ */
+  --color-text: #e7ecf2;
+  --color-text-muted: #7c8794;
+
+  /* Thương hiệu */
+  --color-brand: #d4a24e;
+
+  /* Màu theo quy ước giá chứng khoán VN */
+  --color-up: #2fbf71;       /* tăng */
+  --color-down: #f0473e;     /* giảm */
+  --color-ref: #f4c542;      /* tham chiếu / đứng giá */
+  --color-ceiling: #c86bfa;  /* trần */
+  --color-floor: #4ea8f0;    /* sàn */
+
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+}
+
+/* Số liệu giá luôn dùng monospace để các cột thẳng hàng */
+.tabular {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
